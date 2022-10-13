@@ -2,8 +2,10 @@
 
 //* url = "http://github.com/carbonfive/raygun" -> domain name = "github"
 
-function domainName(url){
-    let ans = url.includes('www.') ? url.replace('www.', ' ') : url.replace('//',' ')
-    ans = ans.replace('.', ' ')
-    return url.includes('www.') || url.includes('http') ?  ans.split(' ')[1] : ans.split(' ')[0]
+function getDomain(url){
+  let ans = url.replace('www.', '')
+  ans = ans.replace('http://', '')
+  ans= ans.replace('https://', '')
+  ans = ans.replace('.', ' ')
+  return ans.split(' ')[0]
   }
