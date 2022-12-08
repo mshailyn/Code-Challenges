@@ -4,7 +4,7 @@
 
 
 function countCharacters(str) {
-  //Create a cache objectto hold character amounts
+  //Create a cache object to hold character amounts
   let charMap = {}
 
   //Loop through string and add character into cache
